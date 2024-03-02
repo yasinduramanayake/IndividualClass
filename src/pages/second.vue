@@ -1,4 +1,13 @@
-<template></template>
+<template>
+  <div>
+    <exampleform />
+  </div>
+</template>
 <script>
-export default {};
+import exampleform from "@/components/exampleform.vue";
+export default {
+  components: {
+    exampleform,
+  },
+};
 </script>
