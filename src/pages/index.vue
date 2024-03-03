@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <test /> -->
+    <test />
 
     <v-card title="Title" elevation="8">
       <v-card-text>hello</v-card-text>
@@ -22,7 +22,6 @@
     <br /><br />
     <v-carousel cycle="">
       <v-carousel-item
-      
         src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
         cover
       ></v-carousel-item>
@@ -38,8 +37,6 @@
       ></v-carousel-item>
     </v-carousel>
 
-
-
     <v-icon icon="mdi-abjad-arabic"></v-icon>
     <v-icon icon="mdi-calendar-import-outline"></v-icon>
     <div class="d-flex justify-content-center">
@@ -53,6 +50,9 @@
 <script>
 import test from "@/components/test.vue";
 export default {
+  data() {
+    heading: "Hello World Component";
+  },
   components: {
     test,
   },
