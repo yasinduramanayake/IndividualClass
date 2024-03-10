@@ -4,7 +4,7 @@
     <v-main>
       <router-view />
     </v-main>
-    hgfdsadfhttgrfedsgdfsgfd
+  
   </v-app>
 </template>
 <script>

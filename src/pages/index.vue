@@ -1,7 +1,8 @@
 <template>
   <div>
-    <test />
+    <test :heading="heading" @emitMessage="getEmitMessage" />
 
+    {{ emitedData }}
     <v-card title="Title" elevation="8">
       <v-card-text>hello</v-card-text>
     </v-card>
@@ -51,7 +52,10 @@
 import test from "@/components/test.vue";
 export default {
   data() {
-    heading: "Hello World Component";
+    return {
+      heading: "Hello Test Component",
+      emitedData: "",
+    };
   },
   components: {
     test,
@@ -59,6 +63,9 @@ export default {
   methods: {
     test() {
       this.$router.push("/second");
+    },
+    getEmitMessage(value) {
+      this.emitedData = value;
     },
   },
 

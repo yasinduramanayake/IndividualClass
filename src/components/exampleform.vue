@@ -57,8 +57,8 @@
     <span class="text-danger d-flex justify-content-center" v-if="loading">
       abc</span
     >
-    <div v-for="item in array1" :key="item">
-      {{ item.name }}
+    <div v-for="item in arraData" :key="item">
+      {{ item.email }}
     </div>
   </div>
 </template>
@@ -66,7 +66,7 @@
 export default {
   data() {
     return {
-      testdata: "hel text",
+      testdata: "hello text",
       number1: 1,
       loading: true,
       array1: [
@@ -95,15 +95,16 @@ export default {
     };
   },
 
-  created() {
-    this.form.textfeild1 = "no";
-    this.form.textfeild2 = "nohgf";
-    this.form.textfeild3 = "nohgfgtfr";
-    this.form.textfeild4 = "nohhgtrgf";
+  props: {
+    propForm: Object,
+    loading: Boolean,
+    arraData: Array,
   },
+  created() {},
   methods: {
     submitData() {
-      this.loading = true;
+      this.form.show = false;
+      this.$emit("formData", this.form);
     },
 
     resetData() {
