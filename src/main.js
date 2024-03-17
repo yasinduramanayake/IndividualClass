@@ -13,6 +13,7 @@ import App from "./App.vue";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "@/assets/scss/exampleform.scss";
+import "@/assets/scss/examplepracticle.scss";
 // Composables
 import { createApp } from "vue";
 

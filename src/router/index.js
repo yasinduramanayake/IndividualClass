@@ -14,6 +14,10 @@ const routes = [
         path: "/second",
         component: () => import("@/pages/second.vue"),
       },
+      {
+        path: "/examplenew",
+        component: () => import("@/pages/examplepracticle.vue"),
+      },
     ],
   },
 ];

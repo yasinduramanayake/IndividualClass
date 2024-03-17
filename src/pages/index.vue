@@ -2,7 +2,6 @@
   <div>
     <test :heading="heading" @emitMessage="getEmitMessage" />
 
-    {{ emitedData }}
     <v-card title="Title" elevation="8">
       <v-card-text>hello</v-card-text>
     </v-card>
@@ -41,7 +40,7 @@
     <v-icon icon="mdi-abjad-arabic"></v-icon>
     <v-icon icon="mdi-calendar-import-outline"></v-icon>
     <div class="d-flex justify-content-center">
-      <v-btn elevation="6" color="primary"
+      <v-btn elevation="6" color="primary" @click="test()"
         ><span class="text-danger"> Button </span>
       </v-btn>
     </div>
@@ -55,13 +54,16 @@ export default {
     return {
       heading: "Hello Test Component",
       emitedData: "",
+    
     };
   },
   components: {
     test,
   },
+  
   methods: {
-    test() {
+   
+    test1() {
       this.$router.push("/second");
     },
     getEmitMessage(value) {
