@@ -36,9 +36,9 @@ export default {
         // eslint-disable-next-line no-undef
         return _.get(response, key);
       },
-    //   getPrice(price) {
-    //     return `RS. ${parseFloat(price).toFixed(2)} `;
-    //   },
+      getPrice(price) {
+        return `RS. ${parseFloat(price).toFixed(2)} `;
+      },
     //   removeLeadingZeorsFromReferences(reference) {
     //     // eslint-disable-next-line no-undef
     //     const split_ref = _.split(reference, "-");

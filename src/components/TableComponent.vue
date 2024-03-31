@@ -23,7 +23,7 @@
                 <span class="text-danger"> {{ props.item.last_name }}</span>
               </div>
               <div v-if="header.value === 'email'">
-                <span class="text-danger"> {{ props.item.email }}</span>
+                <span class="text-danger">{{ getPrice(1000) }}</span>
               </div>
 
               <div v-if="header.value === 'action'">
