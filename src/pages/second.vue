@@ -8,7 +8,7 @@
         @formData="getData"
       />
     </v-dialog>
-    {{ form }}
+  
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <v-btn @click="showDialog()">Show dialog</v-btn>
   </div>

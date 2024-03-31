@@ -54,15 +54,13 @@ export default {
     return {
       heading: "Hello Test Component",
       emitedData: "",
-    
     };
   },
   components: {
     test,
   },
-  
+
   methods: {
-   
     test1() {
       this.$router.push("/second");
     },

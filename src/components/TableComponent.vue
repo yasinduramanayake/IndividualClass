@@ -2,7 +2,7 @@
   <div class="paddings"></div>
   <div>
     <v-container>
-      {{ getArrayLength }}
+      <!-- {{ getArrayLength }} -->
       <v-sheet elevation="8">
         <div v-if="useritems.length != 0">
           <v-data-table
@@ -10,7 +10,32 @@
             :items="useritems"
             item-key="name"
             items-per-page="5"
-          ></v-data-table>
+          >
+            <template
+              v-for="header in headers"
+              :key="header.value"
+              v-slot:[`item.${header.value}`]="props"
+            >
+              <div v-if="header.value === 'first_name'">
+                <span class="text-danger"> {{ props.item.first_name }}</span>
+              </div>
+              <div v-if="header.value === 'last_name'">
+                <span class="text-danger"> {{ props.item.last_name }}</span>
+              </div>
+              <div v-if="header.value === 'email'">
+                <span class="text-danger"> {{ props.item.email }}</span>
+              </div>
+
+              <div v-if="header.value === 'action'">
+                <v-btn
+                  style="text-transform: capitalize"
+                  color="danger"
+                  @click="$router.push(`/innerpage/${props.item.first_name}`)"
+                  >Direct</v-btn
+                >
+              </div>
+            </template>
+          </v-data-table>
         </div>
         <div v-else class="notfound">
           <span class="notfoundtext d-flex justify-content-center"
@@ -43,6 +68,7 @@ export default {
         { title: "First Name", value: "first_name" },
         { title: "Last Name", value: "last_name" },
         { title: "Email", value: "email" },
+        { title: "Action", value: "action" },
       ],
     };
   },
@@ -76,7 +102,6 @@ export default {
     getArrayLength() {
       return this.useritems.length;
     },
-    
   },
 
   async created() {

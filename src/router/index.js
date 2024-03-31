@@ -8,6 +8,7 @@ const routes = [
     children: [
       {
         path: "/",
+        name: "name1",
         component: () => import("@/pages/index.vue"),
       },
       {
@@ -17,6 +18,17 @@ const routes = [
       {
         path: "/examplenew",
         component: () => import("@/pages/examplepracticle.vue"),
+      },
+
+      {
+        path: "/innerpage/:firstname",
+        name: "inner",
+        component: () => import("@/pages/innerpage.vue"),
+      },
+
+      {
+        path: "/exampleformvalidtion",
+        component: () => import("@/pages/validationform.vue"),
       },
     ],
   },
