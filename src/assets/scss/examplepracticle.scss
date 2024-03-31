@@ -1,0 +1,15 @@
+.examplepracticle {
+  .paddings {
+    margin: 70px;
+  }
+  .button_update {
+    text-transform: capitalize;
+  }
+  .notfound {
+    padding: 40px 40px 40px 40px;
+    .notfoundtext {
+      color: red;
+      text-align: center;
+    }
+  }
+}
